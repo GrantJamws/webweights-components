@@ -1,0 +1,46 @@
+@import '../../styles/styles.scss';
+
+.webweights-checkbox-button {
+  position: relative;
+  color: $brand-light;
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    visibility: hidden;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 0.125rem solid $brand-light;
+    border-radius: $border-radius;
+  }
+  
+  input:not(:disabled) + label {
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $brand-dark-hover;
+    }
+  }
+
+  input:checked + label {
+    border-color: $brand-primary;
+    background-color: $brand-primary;
+    color: $brand-dark;
+
+    &:hover:not(:disabled) {
+      background-color: $brand-primary-hover;
+    }
+  }
+
+  &.webweights-checkbox-button--disabled {
+    opacity: 0.5;
+  }
+}

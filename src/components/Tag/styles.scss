@@ -1,0 +1,35 @@
+@import '../../styles/styles.scss';
+
+.webweights-tag {
+  all: unset;
+  position: relative;
+  background: $brand-primary;
+  color: $font-color-dark;
+  width: max-content;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  box-sizing: border-box;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+
+  &.webweights-tag--outline {
+    background: $brand-dark;
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+  }
+
+  &.webweights-tag--small {
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.3rem;
+    font-size: 0.5rem;
+  }
+
+  &.webweights-tag--large {
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/styles.scss';
+
+.webweights-spinner {
+  border: 0.2rem solid rgba($brand-primary, 0.1);
+  border-top: 0.2rem solid rgba($brand-primary, 0.6);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 1s linear infinite;
+
+  &.webweights-spinner--small {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &.webweights-spinner--large {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &.webweights-spinner--light-background {
+    border-color: rgba($brand-dark, 0.1);
+    border-top-color: rgba($brand-dark, 0.6);
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
